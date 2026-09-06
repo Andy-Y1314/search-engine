@@ -9,4 +9,4 @@ search_engine.o: search_engine.cpp search_engine.h
 	$(CC) search_engine.cpp -c
 
 clean:
-	rm -f *.o
+	rm -f *.o search_engine
