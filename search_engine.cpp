@@ -11,12 +11,5 @@ int main(int argc, char* argv[]) {
     int max_length = -1;
     int k = atoi(argv[4]);
 
-    ifstream file(argv[2]);
-
-    if (!file) {
-        cout << "Error opening file" << endl;
-        return -1;
-    }
-    
-    return 0;
+    read_sizes(&line_counter, &max_length, argv[2]);
 }
