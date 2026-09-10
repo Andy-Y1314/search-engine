@@ -12,4 +12,5 @@ int main(int argc, char* argv[]) {
     int k = atoi(argv[4]);
 
     read_sizes(&line_counter, &max_length, argv[2]);
+    return 0;
 }
