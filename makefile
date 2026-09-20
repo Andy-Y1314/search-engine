@@ -2,8 +2,11 @@ CC = g++
 
 default: search_engine
 
-search_engine: search_engine.o read_input.o
-	$(CC) search_engine.o read_input.o -o search_engine
+search_engine: search_engine.o read_input.o Map.o
+	$(CC) search_engine.o read_input.o Map.o -o search_engine 
+
+Map.o: Map.cpp Map.h
+	$(CC) Map.cpp -c
 
 read_input.o: read_input.cpp read_input.h
 	$(CC) read_input.cpp -c
