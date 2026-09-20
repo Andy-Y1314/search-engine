@@ -3,16 +3,16 @@ CC = g++
 default: search_engine
 
 search_engine: search_engine.o read_input.o Map.o
-	$(CC) search_engine.o read_input.o Map.o -o search_engine 
+	$(CC) search_engine.o read_input.o Map.o -o search_engine
 
 Map.o: Map.cpp Map.h
-	$(CC) Map.cpp -c
+	$(CC) -c Map.cpp
 
 read_input.o: read_input.cpp read_input.h
-	$(CC) read_input.cpp -c
+	$(CC) -c read_input.cpp
 
 search_engine.o: search_engine.cpp search_engine.h
-	$(CC) search_engine.cpp -c
+	$(CC) -c search_engine.cpp
 
 clean:
 	rm -f *.o search_engine
