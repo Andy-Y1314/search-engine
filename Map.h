@@ -1,5 +1,8 @@
 #include <iostream>
 
+#ifndef MAP_H
+#define MAP_H
+
 class Mymap {
 private:
     int size;
@@ -11,3 +14,5 @@ public:
     Mymap(int size, int buffer_size);
     ~Mymap();
 };
+
+#endif
