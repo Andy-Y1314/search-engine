@@ -13,6 +13,8 @@ private:
 public:
     Mymap(int size, int buffer_size);
     ~Mymap();
+    const int get_size() {return size;}
+    const int get_buffer_size() {return buffer_size;}
 };
 
 #endif
