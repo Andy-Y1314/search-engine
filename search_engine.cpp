@@ -19,7 +19,11 @@ int main(int argc, char* argv[]) {
     }
 
     Mymap* my_map = new Mymap(line_counter, max_length);
-    read_input(my_map, argv[2]);
+    
+    if (read_input(my_map, argv[2]) == -1) {
+        delete(my_map);
+        return -1;
+    }
 
     std::cout << "Initialisation Finished" << std::endl;
     std::cout << "Line Counter: " << line_counter << std::endl << "Max Length: " << max_length << std::endl;
