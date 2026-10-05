@@ -21,7 +21,7 @@ int read_sizes(int& line_counter, int& max_length, const std::string& doc_file) 
     }
 
     if (line_counter == 0 || max_length < 3) {
-        std::cout << "Document is too empty and does not meet requirements" << std::endl;
+        std::cout << "Document is too empty and does not meet requirements!" << std::endl;
         return -1;
     }
     return 1;
@@ -36,7 +36,7 @@ int read_input(Mymap* my_map, char* doc_file) {
         std::getline(file, line);
 
         if (my_map->insert(line.data(), i) == -1) {
-            std::cout << "Document does not meet the requirements" << std::endl;
+            std::cout << "Document does not meet the format requirements!" << std::endl;
             return -1;
         }
     }
