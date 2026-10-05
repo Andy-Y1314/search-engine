@@ -11,7 +11,7 @@ int read_sizes(int& line_counter, int& max_length, const std::string& doc_file) 
     std::string line;
     int current_length;
 
-    while (getline(file, line)) {
+    while (std::getline(file, line)) {
         current_length = line.length();
 
         if (max_length < current_length) {
@@ -28,5 +28,17 @@ int read_sizes(int& line_counter, int& max_length, const std::string& doc_file) 
 }
 
 int read_input(Mymap* my_map, char* doc_file) {
-    
+    std::ifstream file(doc_file);
+
+    std::string line;
+
+    for (int i = 0; i < my_map->get_size(); i++) {
+        std::getline(file, line);
+
+        if (my_map->insert(line.data(), i) == -1) {
+            std::cout << "Document does not meet the requirements" << std::endl;
+            return -1;
+        }
+    }
+    return 1;
 }
